@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('collaterals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('loan_id');
             $table->integer('type_id')->nullable();
             $table->string('name')->nullable();
             $table->string('product_name')->nullable();

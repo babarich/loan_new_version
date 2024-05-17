@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('collaterals', function (Blueprint $table) {
-            $table->foreignId('loan_id')->references('id')->on('loans')->onDelete('cascade');
+            $table->foreignId('loan_id')->references('id')
+                ->on('loans')->onDelete('cascade');
         });
     }
 
