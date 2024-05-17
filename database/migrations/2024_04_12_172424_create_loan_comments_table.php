@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('loan_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('loan_id');
             $table->text('description')->nullable();
             $table->integer('user_id')->nullable();
             $table->foreignId('com_id')->references('id')->on('companies')->onDelete('cascade');

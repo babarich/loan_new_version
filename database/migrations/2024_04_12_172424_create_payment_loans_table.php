@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('payment_loans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('loan_id');
             $table->text('description')->nullable();
             $table->decimal('amount', 40)->nullable();
             $table->string('type')->nullable();
